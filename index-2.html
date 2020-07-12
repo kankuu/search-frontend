@@ -1,34 +1,22 @@
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="main">
-      <form>
-        <div class="inner-form">
-          <div class="input-field first-wrap">
-            <input id="search" type="text" placeholder="Enter Keywords?" />
-          </div>
-          <div class="input-field second-wrap">
-            <button class="btn-search" type="button">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <script src="js/extention/choices.js"></script>
-    <script>
-      const choices = new Choices('[data-trigger]',
-      {
-        searchEnabled: false,
-        itemSelectText: '',
-      });
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark pink lighten-3 mb-4">
 
-    </script>
-  </body>
-</html>
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <!-- Search form -->
+    <form class="form-inline mr-auto">
+      <div class="md-form my-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <i class="fas fa-search text-white ml-3" aria-hidden="true"></i>
+      </div>
+    </form>
+
+  </div>
+  <!-- Collapsible content -->
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">Navbar</a>
+
+</nav>
+<!--/.Navbar-->
