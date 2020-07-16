@@ -29,6 +29,7 @@ body {
 
 .form-control:focus {
     box-shadow: none;
+    
 }
 
 footer{
@@ -112,5 +113,4 @@ footer .bawah{
 
 #result-nav, #result-main {
     display:none; 
-    padding-bottom: 25px;
 }
