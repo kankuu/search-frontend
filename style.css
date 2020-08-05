@@ -29,7 +29,6 @@ body {
 
 .form-control:focus {
     box-shadow: none;
-    
 }
 
 footer{
@@ -111,14 +110,14 @@ footer .bawah{
     background-color: #e9e9e9; 
 }
 
-img{
+.hot img{
     height: 150px;
     width: auto;
     transition: 0.5s;
     border: rgba(0, 0, 0, 0.1);
 }
 
-img:hover{
+.hot img:hover{
     /* background-color: rgb(135, 206, 235, .2); */
     transform: scale(1.1);
 }
@@ -144,6 +143,28 @@ img:hover{
     display:none;
 }
 
+.btn-danger{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+  }
+  
+/* 
 #result-detail {
     background-color: black;
     height: 200px;
@@ -151,4 +172,4 @@ img:hover{
     position: absolute;
     overflow: hidden;
     width: 100%;
-}
+} */
