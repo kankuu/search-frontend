@@ -2,33 +2,62 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="main">
+    <!-- NavBar -->
+    <div id="result-nav" style="background-color: #F5F5F5;">
+      <nav class="navbar navbar-expand-lg navbar-dark lighten-2 mb-4">
+        <div class="collapse navbar-collapse">
+          <form>
+            <div class="input-group-append rounded-pill">
+              <button id="btn-search-result" type="button" class="btn btn-link text-success"><i class="fa fa-search"></i></button>
+              <input id="search-result" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0 search">
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <!-- NavBar -->
+    <!-- MAIN -->
+    <div class="main" id="main">
       <form>
-        <div class="text"><h1>SEARCH</h1></div>
+        <div class="text-title"><h1>SEARCH</h1></div>
         <div class="input-group mb-4 border rounded-pill p-1">
-          <input id="search" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0 search">
           <div class="input-group-append border-0">
             <button id="btn-search" type="button" class="btn btn-link text-success"><i class="fa fa-search"></i></button>
           </div>
+          <input id="search" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0 search">
         </div>
       </form>
     </div>
+    <!-- MAIN -->
+    <!-- MAIN-Result -->
+    <div id="result-main">
+      <div class="row" id="result-content"></div>
+      <div id="result-detail">
+        <div id="detail" class="modal"></div>
+      </div>
+    </div>
+
+    <!-- MAIN-Result -->
     <div class="footer bg-light">
       <footer class="page-footer font-small blue-grey lighten-5">
         <div style="background-color: #F5F5F5;">
-          <div class="footer-copyright text-center text-black-50 py-3">© 2020 Copyright:
+          <!-- <div class="footer-copyright text-black-50 py-3">© 2020 Copyright:
             <a class="dark-grey-text" href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-          </div>
+          </div> -->
           <div class="bawah">
             <div class="container">
-              <div class="row py-2 d-flex align-items-center">
-                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+              <div class="row row-footer py-2 d-flex">
+                <div class="col-md-6 text-md-left mb-4 mb-md-0">
                   <ul id="menu">
                     <li>
                       <a href="https://www.google.com/intl/en/ads/?fg=1">Advertising</a>
@@ -41,7 +70,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-md-6 col-lg-7 text-center text-md-right">
+                <div class="col-md-6 text-md-right">
                   <ul id="menu">
                     <li>
                       <a href="https://www.google.com/intl/en/policies/privacy/?fg=1">Privacy</a>
@@ -50,7 +79,7 @@
                       <a href="https://www.google.com/intl/en/policies/terms/?fg=1">Terms</a>
                     </li>
                     <li>
-                      <a href="https://www.google.com/preferences?hl=en">Settings</a>
+                      <a href="https://www.google.com/preferences?hl=en">Settings</a> 
                     </li>
                   </ul>
                 </div>  
