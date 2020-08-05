@@ -78,10 +78,8 @@ $(function() {
         for(var i in data){
 
             var load = "<div class='hot'>" +
-                        "<div class='paket'>" +
-                        "<a href=" + data[i].link + "><img id=" + data[i].id + " src=" + data[i].img + " alt= " + data[i].value + " class='img-responsive normal'/></a></br>" +
-                        "</div>" +
-                        "<a id='link-text' href=" + data[i].link + "><span>" + data[i].value + "</span></a>" +
+                        "<a class='pilih' href='#detail' rel='modal:open' id=" + data[i].id + "><img src=" + data[i].img + " alt= " + data[i].value + " class='img-responsive normal' /></a></br>" +
+                        // "<a id='link-text' href=" + data[i].link + "><span>" + data[i].value + "</span></a>" +
                         "</div>";
             
         $("#result-content").append(load);
@@ -109,6 +107,20 @@ $(function() {
 
     showData(availSearch)
 
+    function showDetail(id) {
+        var result = availSearch.find(function(item) {
+            return item.id == id;
+        })
+        var json = JSON.stringify(result);
+        
+        // console.log('hasil = ' + result.id);
+        var load = "<img id=" +  result.id + " src=" + result.img + " alt= " + result.value + " class='img-responsive normal' />" +
+                    "<h1>" + result.value + "</h1>" +
+                    "<p class='mb-40'>" + result.link + "</p>";
+
+        return $('#detail').append(load);
+    }
+
     $("#btn-search").click(function(){
         // var value = $("#search").val()
         // console.log('Value:', value)
@@ -120,8 +132,19 @@ $(function() {
         $("#result-main").show();
     });
 
+    $('.pilih').click(function () {   
+        var id = this.id;
+        showDetail(id);
+        // console.log("id = " + id);
+        
+        $(this).modal({
+            fadeDuration: 1000,
+            fadeDelay: 0.50
+        });
+        // return false;
+    })
 
-    
+
 });
 
 // $(document).ready(function(){
