@@ -2,21 +2,23 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <!-- NavBar -->
     <div id="result-nav" style="background-color: #F5F5F5;">
       <nav class="navbar navbar-expand-lg navbar-dark lighten-2 mb-4">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse">
           <form>
             <div class="input-group-append rounded-pill">
-              <input id="search-result" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0 search">
               <button id="btn-search-result" type="button" class="btn btn-link text-success"><i class="fa fa-search"></i></button>
+              <input id="search-result" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0 search">
             </div>
           </form>
         </div>
@@ -29,10 +31,10 @@
       <form>
         <div class="text-title"><h1>SEARCH</h1></div>
         <div class="input-group mb-4 border rounded-pill p-1">
-          <input id="search" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0 search">
           <div class="input-group-append border-0">
             <button id="btn-search" type="button" class="btn btn-link text-success"><i class="fa fa-search"></i></button>
           </div>
+          <input id="search" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0 search">
         </div>
       </form>
     </div>
@@ -40,7 +42,9 @@
     <!-- MAIN-Result -->
     <div id="result-main">
       <div class="row" id="result-content"></div>
-      <!-- <div id="result-detail"></div> -->
+      <div id="result-detail">
+        <div id="detail" class="modal"></div>
+      </div>
     </div>
 
     <!-- MAIN-Result -->
